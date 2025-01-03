@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Beginner</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+    <!-- inline styling -->
+     <p style="color: green;background: yellow;;">Hey im Vishnu!</p>
+ 
+     <h1>Hello</h1>
+
+     <!-- Class Selector -->
+    <p class="textOne font-normal">Hey im a paragraph</p>
+    <p class="textTwo"><u>Hey im a super hero</u></p>
+    <p class="textThree font-normal">Dummy</p>
+
+    <!-- ID Selector -->
+    <div id="circle"></div>
+
+    <div>
+        <ul class="list">
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+        </ul>
+    </div>
+
+    <div style="background-color: green; width: 100px; height: 100px;">
+        Im block
+    </div>
+    <span style="display: inline-block; background: yellow; width: 100px; height: 100px;">
+        Im block
+    </span>
+
+    <div class="box">
+
+    </div>
+
+    <input class="special" placeholder="Enter your query" />
+
+    <script>
+        var divTag = document.getElementById("circle");
+        divTag.style.width = "100px";
+        divTag.style.height = "100px";
+        divTag.style.background = "yellow";
+        divTag.style.borderRadius = "50%";
+    </script>
+</body>
+</html>

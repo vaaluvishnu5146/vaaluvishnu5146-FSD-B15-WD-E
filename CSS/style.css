@@ -1,0 +1,74 @@
+/* Tag selector */
+p, h1 {
+    color: violet;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.special:hover {
+    background: yellow;
+}
+
+/* .special:active {
+    background: red;
+} */
+
+.special:focus {
+    background: blue;
+}
+
+.list {
+    > li {
+        color: orangered;
+    }
+}
+
+.list > li:hover {
+    background: black;
+}
+
+/* Class Selector */
+/* Class name starts with . (dot) */
+.textOne {
+    color: red;
+}
+.textTwo {
+    color: blue;
+}
+.textThree {
+    color: violet;
+    text-decoration: underline;
+}
+
+.font-normal {
+    font-style: normal;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background: red;
+    border-radius: 50%;
+}
+
+/* ID Selector */
+/*
+Put # in front of name
+*/
+/* #circle {
+    width: 100px;
+    height: 100px;
+    background: green;
+    border-radius: 50%;
+} */
+
+.box {
+    width: 100px;
+    height: 50px;
+    border: 1px solid black;
+}
+
+.box:hover {
+    background: green;
+    border: 1px solid orangered;
+}
