@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Sticky</title>
+    <style>
+        html, body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .parent {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: end;
+            align-items: center;
+            gap: 10px;
+            width: 1000px;
+            height: 500px;
+            background: green;
+        }
+
+        .square {
+            width: 100px;
+            height: 100px;
+            background-color: lightseagreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="square">1</div>
+        <div class="square">2</div>
+        <div class="square">3</div>
+    </div>
+</body>
+</html>

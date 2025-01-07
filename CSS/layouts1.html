@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout 1</title>
+    <style>
+        .flex {
+            display: flex;
+        }
+        .one {
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(to top, #e66465, #9198e5);
+        }
+        .two {
+            width: 70%;
+            height: 500px;
+            background: red;
+        }
+        .three {
+            width: 30%;
+            height: 500px;
+            background: yellow;
+        }
+
+        @media screen and (max-width: 460px) {
+            .flex-2 {
+                flex-direction: column-reverse;
+            }
+            .two {
+                width: 100%;
+                height: 100px;
+            }
+            .three {
+                width: 100%;
+                height: 100px;
+            }
+        }
+
+        @media screen and (min-width: 461px) and (max-width: 1080px) {
+            .two {
+                background-color: green;
+            }
+            .three {
+                background-color: brown;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="flex" style="flex-direction: column; gap: 10px;">
+        <div class="one">
+            
+        </div>
+        <div class="flex flex-2" style="column-gap: 10px;">
+            <div class="two"></div>
+            <div class="three"></div>
+        </div>
+        <div class="one">
+            
+        </div>
+    </div>
+</body>
+</html>
