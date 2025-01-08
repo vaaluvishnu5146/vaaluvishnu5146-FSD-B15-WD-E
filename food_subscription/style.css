@@ -1,0 +1,254 @@
+:root {
+    --COLOR-PRIMARY: #FF7E00;
+    --COLOR-SECONDARY: #EC2633;
+    --COLOR-BG: #F4ECE1;
+    --COLOR-DARK: #2F2F2F;
+    --COLOR-DARK-ACCENT: #948C8C;
+    --COLOR-LIGHT: #FFFFFF;
+}
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--COLOR-BG);
+    font-family: "poppins";
+}
+
+body {
+    padding: 0 100px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0px;
+    line-height: 30px;
+}
+
+p {
+    line-height: 20px;
+}
+
+input, button, a {
+    font-family: "poppins";
+}
+
+ul, ol {
+    margin: 0px;
+    padding: 0px;
+} 
+
+/* UTILITY CLASSES */
+.w-full {
+    width: 100%;
+}
+
+.row-gap-10 {
+    row-gap: 10px;
+}
+
+.row-gap-20 {
+    row-gap: 20px;
+}
+
+.row-gap-30 {
+    row-gap: 20px;
+}
+
+.col-gap-10 {
+    column-gap: 10px;
+}
+
+.col-gap-20 {
+    column-gap: 20px;
+}
+
+.col-gap-30 {
+    column-gap: 20px;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex_col {
+    flex-direction: column;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.mb-40 {
+    margin-bottom: 40px;
+}
+
+.mb-50 {
+    margin-bottom: 50px;
+}
+
+/* Button design */
+button {
+    cursor: pointer;
+}
+
+.primary_button {
+    width: 120px;
+    height: 50px;
+    border-radius: 50px;
+    color: var(--COLOR-LIGHT);
+    background: var(--COLOR-DARK);
+}
+
+.video_button {
+    min-width: 120px;
+    height: 50px;
+    color: var(--COLOR-DARK);
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border: none;
+    outline: none;
+    
+    .play {
+        width: 50px;
+        height: 50px;
+        background: var(--COLOR-LIGHT);
+        border-radius: 100%;
+        background-image: url('./assets/polygon.png');
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    p {
+        font-weight: 600;
+    }
+}
+
+/* app_header */
+.app_header {
+    padding: 50px 0;
+    .branding {
+        width: 40%;
+        img {
+            width: 30px;
+        }
+        span {
+            font-weight: bold;
+        }
+    }
+    .links_container {
+        width: 60%;
+        
+        ul {
+            list-style-type: none;
+        }
+
+        .search_element {
+            width: 300px;
+            height: 50px;
+            background: var(--COLOR-LIGHT);
+            border-radius: 25px;
+            padding: 15px;
+            box-sizing: border-box;
+
+            input {
+                border: none;
+                outline: none;
+            }
+
+            input::placeholder {
+                font-size: 16px;
+            }
+
+            .cart-icon {
+                padding-left: 10px;
+                border-left: 1px solid var(--COLOR-DARK-ACCENT);
+                .cart-count {
+                    position: relative;
+                    display: inline-block;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 100%;
+                    background: var(--COLOR-SECONDARY);
+                    color: var(--COLOR-LIGHT);
+                    padding: 2px;
+                    box-sizing: border-box;
+                    font-size: 12px;
+                    text-align: center;
+                    bottom: 15px;
+                    right: 5px;
+                    box-shadow: 0px 0px 20px 0px var(--COLOR-SECONDARY);
+                }
+            }
+        }
+    }
+}
+
+/* Hero Section */
+.hero {
+    height: calc(100vh - 150px);
+    .content {
+        width: 40%;
+        h1 {
+            font-size: 75px;
+            color: var(--COLOR-PRIMARY);
+        }
+        h4 {
+            font-size: 30px;
+        }
+        .arrow {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-image: url('./assets/arrow.png');
+            background-size: contain;
+            top: -40px;
+            right: 70px;
+        }
+    }
+    .image {
+        width: 60%;
+        height: 90%;
+        background-image: url('./assets/hero_iamge.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+/* we_deliver */
+.we_deliver {
+    height: 500px;
+
+    .product_card {
+        width: calc(25% - 30px);
+        height: 290px;
+        background: var(--COLOR-LIGHT);
+        border-radius: 10px;
+        padding: 15px;
+        box-sizing: border-box;
+
+        img {
+            width: 50%;
+        }
+    }
+}
