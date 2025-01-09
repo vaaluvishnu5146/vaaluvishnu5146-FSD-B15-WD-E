@@ -1,0 +1,322 @@
+:root {
+    --COLOR-DARK: #8B8E99;
+    --COLOR-LIGHT: #FFFFFF;
+    --COLOR-PRIMARY: #3858D6;
+    --COLOR-LIGHT-GREY: #F6F6F6;
+    --COLOR-DARK-100: #0B0B0B;
+}
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--COLOR-BG);
+    font-family: "poppins";
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0px;
+    line-height: 30px;
+}
+
+p {
+    line-height: 20px;
+}
+
+input, button, a {
+    font-family: "poppins";
+}
+
+ul, ol {
+    margin: 0px;
+    padding: 0px;
+} 
+
+/* UTILITY CLASSES */
+.w-full {
+    width: 100%;
+}
+
+.row-gap-10 {
+    row-gap: 10px;
+}
+
+.row-gap-20 {
+    row-gap: 20px;
+}
+
+.row-gap-30 {
+    row-gap: 20px;
+}
+
+.col-gap-10 {
+    column-gap: 10px;
+}
+
+.col-gap-20 {
+    column-gap: 20px;
+}
+
+.col-gap-30 {
+    column-gap: 20px;
+}
+
+.col-gap-40 {
+    column-gap: 40px;
+}
+
+.col-gap-50 {
+    column-gap: 50px;
+}
+
+.col-gap-100 {
+    column-gap: 100px;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex_col {
+    flex-direction: column;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mb-15 {
+    margin-bottom: 15px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.mb-40 {
+    margin-bottom: 40px;
+}
+
+.mb-50 {
+    margin-bottom: 50px;
+}
+
+/* ELEMENTS */
+.primary_button {
+    width: 112px;
+    height: 45px;
+    background-color: var(--COLOR-PRIMARY);
+    border-radius: 10px;
+    color: var(--COLOR-LIGHT);
+    border: none;
+    outline: none;
+}
+
+/* COMPONENTS */
+
+/*
+SECTION
+*/
+.section_container {
+    padding: 0 150px;
+    box-sizing: border-box;
+    margin-bottom: 100px;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(to bottom, #383638, #0B0B0B);
+    height: 100vh;
+
+    .app_header {
+        height: 70px;
+        padding: 10px 0;
+        box-sizing: border-box;
+        color: var(--COLOR-LIGHT);
+
+        .branding_container {
+            width: 30%;
+
+            img {
+                width: 30px;
+            }
+        }
+        .nav_links_container {
+            width: 60%;
+
+            ul {
+                list-style-type: none;
+                color: var(--COLOR-DARK);
+            }
+        }
+        .cta_container {
+            width: 10%;
+            button {
+                background: transparent;
+                outline: none;
+                border: none;
+            }
+        }
+    }
+
+    .hero-content {
+        height: calc(100% - 70px);
+        .content {
+            width: 50%;
+
+            h1 {
+                font-size: 80px;
+                line-height: 80px;
+                color: var(--COLOR-LIGHT);
+            }
+
+            p {
+                color: var(--COLOR-DARK);
+            }
+        }
+        .image {
+            width: 50%;
+            height: 80%;
+            background-image: url('./assets/hero_watch.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}
+
+.search_input {
+    width: 100%;
+    height: 60px;
+    background: var(--COLOR-LIGHT);
+    border-radius: 10px;
+    padding: 0 10px;
+    box-sizing: border-box;
+
+    .prefix-icon {
+        padding: 10px 10px 10px 0;
+        height: 100%;
+        width: 25px;
+    }
+
+    input {
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        outline: none;
+        border: none;
+    }
+}
+
+/* Brands */
+.section_header {
+    box-sizing: border-box;
+    text-align: center;
+
+    p {
+        color: var(--COLOR-PRIMARY);
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+    h2 {
+        font-size: 36px;
+    }
+}
+
+.brands {
+    .brand_card {
+        padding: 20px 40px;
+        box-sizing: border-box;
+        width: 33.333%;
+        background-color: var(--COLOR-LIGHT-GREY);
+        height: 250px;
+        border-radius: 20px;
+
+        .content {
+            h2 {
+                font-size: 35px;
+            }
+            p {
+                color: var(--COLOR-DARK);
+            }
+        }
+
+    }
+}
+
+.product_card {
+    width: 33.333%;
+    max-height: 440px;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    .content {
+        text-align: center;
+        .pricing {
+            .normal-pricing {
+                color: var(--COLOR-DARK);
+                font-size: 16px;
+                text-decoration: line-through;
+                margin-right: 5px;
+            }
+            .actual-pricing {
+                font-size: 20px;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+/* NEWSLETTER SECTION */
+.newsletter-container {
+    background-color: var(--COLOR-LIGHT-GREY);
+    width: 100%;
+    height: 370px;
+    border-radius: 20px;
+    padding: 50px 100px;
+    box-sizing: border-box;
+
+    .content {
+        width: 50%;
+        h2 {
+            font-size: 40px;
+        }
+    }
+    .image {
+        width: 50%;
+        height: 100%;
+        background-image: url('./assets/apple-smart-i.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+/* Footer */
+.footer {
+    width: 100%;
+    height: 50px;
+    color: var(--COLOR-LIGHT);
+    background-color: var(--COLOR-DARK-100);
+}
