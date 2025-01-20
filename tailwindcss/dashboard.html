@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Layout</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template: 
+            "header header header header header header" 100px
+            "start start start start end end" calc(100vh - 200px)
+            "footer footer footer footer footer footer" 100px;
+            gap: 10px;
+        }
+
+        .header {
+            background: red;
+            grid-area: header;
+        }
+
+        .footer {
+            background: blue;
+            grid-area: footer;
+        }
+
+        .start {
+            background: pink;
+            grid-area: start;
+        }
+
+        .end {
+            background: brown;
+            grid-area: end;
+        }
+
+        @media screen and (max-width: 460px) {
+            .container {
+                grid-template: 
+                "header header header header header header" 100px
+                "start start start start start start" calc(100vh / 2 - 100px) 
+                "end end end end end end" calc(100vh / 2 - 100px) 
+                "footer footer footer footer footer footer" 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Header</div>
+        <div class="start">Start</div>
+        <div class="end">ENd</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>

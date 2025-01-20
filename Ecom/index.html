@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Description</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html, body {
+            font-family: "poppins";
+        }
+        .search-input {
+            width: 300px;
+            height: 40px;
+            background-color: rgb(238, 238, 238);
+            border-radius: 5px;
+
+            input {
+                outline: none;
+                border: none;
+            }
+
+        }
+
+        .rating-star {
+            width: 24px;
+            height: 24px;
+        }
+
+        .color-selector-cta {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url("https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/450ed1df-8e17-4d87-a244-85697874661c/NIKE+REVOLUTION+7.png");
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header id="header" class="px-20 py-5 header border">
+        <div id="head" class="flex head mb-5">
+            <div class="w-1/4">
+                <h1 class="text-2xl font-bold text-gray-950">BR.<span class="text-gray-300">F</span></h1>
+            </div>
+            <div class="flex justify-center w-2/4">
+                <div class="flex search-input">
+                    <img class="w-10 p-3" src="./assets/search.png" />
+                    <input class="w-full bg-transparent" placeholder="Search" />
+                </div>
+            </div>
+            <div class="flex gap-x-5 items-center justify-end w-1/4">
+                <div class="flex flex-col items-center">
+                    <img class="w-5" src="./assets/shoppingbag.png" />
+                    <p class="text-sm font-bold">Cart</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <img class="w-5" src="./assets/favourite.png" />
+                    <p class="text-sm font-bold">Favourites</p>
+                </div>
+                <div>
+                    <img class="w-12 rounded-full" src="./assets/pofileimage.webp" />
+                </div>
+            </div>
+        </div>
+        <div id="nav" class="nav">
+            <ul class="flex gap-x-5">
+                <li>
+                    <a class="font-semibold hover:text-red-600" href="#">Women</a></li>
+                <li><a class="font-semibold hover:text-red-600" href="#">Men</a></li>
+                <li><a class="font-semibold hover:text-red-600" href="#">Kids</a></li>
+                <li><a class="font-semibold hover:text-red-600" href="#">Sports</a></li>
+                <li><a class="font-semibold hover:text-red-600" href="#">Brands</a></li>
+                <li><a class="font-semibold hover:text-red-600" href="#">New</a></li>
+                <li><a class="font-semibold hover:text-red-600" href="#">Sale</a></li>
+            </ul>
+        </div>
+    </header>
+    <main class="px-5 md:px-20" id="main">
+       <div id="breadcrumbs">
+        <p class="flex items-center gap-x-3 text-xs my-5 font-semibold">
+            <span>Cloths and Shoes</span>
+            <span class="w-1 h-1 rounded bg-slate-300"></span>
+            <span>Shoes</span>
+            <span class="w-1 h-1 rounded bg-slate-300"></span>
+            <span>Reebok</span>
+        </p>
+       </div> 
+        <div id="product-details-container" class="flex flex-col gap-x-10 md:flex-row">
+            <div class="w-full gallery md:w-1/2">
+                <img class="rounded-lg mb-3" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/450ed1df-8e17-4d87-a244-85697874661c/NIKE+REVOLUTION+7.png" />
+                <div class="flex gap-x-2 scroll-image-selectors">
+                    <img class="w-1/5 rounded bg-slate-100" src="https://static.nike.com/a/images/t_default/00b15964-4630-4e93-8097-5d55ca96c589/NIKE+REVOLUTION+7.png" />
+                    <img class="w-1/5 rounded bg-slate-100" src="https://static.nike.com/a/images/t_default/d83f6924-80cd-4150-aaa8-0406daf1451e/NIKE+REVOLUTION+7.png" />
+                </div>
+            </div>
+            <div class="w-full details md:w-1/2">
+                <div class="flex justify-between mb-3">
+                    <div class="flex gap-x-3 items-center">
+                        <img src="./assets/reebok-crossfit.png" />
+                        <p class="font-bold">Reebok</p>
+                    </div>
+                    <div class="flex items-center">
+                        <p class="text-slate-500 font-semibold">HR132500-W</p>
+                    </div>
+                </div>
+                <h1 class="text-4xl font-semibold mb-3">Shoes Reebox Zig Kinetica 3</h1>
+                <div class="flex gap-x-3 mb-8">
+                    <div class="flex gap-x-1">
+                        <img class="rating-star" src="./assets/star.svg" />
+                        <img class="rating-star" src="./assets/star.svg" />
+                        <img class="rating-star" src="./assets/star.svg" />
+                        <img class="rating-star" src="./assets/star.svg" />
+                        <img class="rating-star" src="./assets/staroutline.svg" />
+                    </div>
+                    <p class="text-slate-500 font-semibold">42 Reviews</p>
+                </div>
+                <h2 class="text-5xl font-semibold mb-8">$199.20</h2>
+                <p class="flex items-center gap-x-3 text-xs my-5 font-semibold">
+                    <span>Color</span>
+                    <span class="w-1 h-1 rounded bg-slate-300"></span>
+                    <span class="text-slate-400">White</span>
+                </p>
+                <div class="flex gap-x-2 mb-3">
+                    <div class="w-10 h-12 bg-slate-300 rounded color-selector-cta">
+
+                    </div>
+                    <div class="w-10 h-12 bg-slate-300 rounded color-selector-cta">
+
+                    </div>
+                    <div class="w-10 h-12 bg-slate-300 rounded color-selector-cta">
+
+                    </div>
+                </div>
+                <p class="flex items-center gap-x-3 text-xs my-5 font-semibold">
+                    <span>Size</span>
+                    <span class="w-1 h-1 rounded bg-slate-300"></span>
+                    <span class="text-slate-400">EU Men</span>
+                </p>
+                <div class="w-full flex flex-wrap gap-3 mb-2">
+                    <button class="w-1/6 h-10 border border-slate-300 rounded bg-transparent active:bg-slate-950 hover:text-white hover:bg-slate-950 hover:text-white">
+                        41
+                    </button>
+                    <button class="w-1/6 h-10 border border-slate-300 rounded bg-transparent active:bg-slate-950 hover:text-white hover:bg-slate-950 hover:text-white">
+                        42
+                    </button>
+                    <button class="w-1/6 h-10 border border-slate-300 rounded bg-transparent active:bg-slate-950 hover:text-white hover:bg-slate-950 hover:text-white">
+                        43
+                    </button>
+                    <button class="w-1/6 h-10 border border-slate-300 rounded bg-transparent active:bg-slate-950 hover:text-white hover:bg-slate-950 hover:text-white">
+                        44
+                    </button>
+                    <button class="w-1/6 h-10 border border-slate-300 rounded bg-transparent active:bg-slate-950 hover:text-white hover:bg-slate-950 hover:text-white">
+                        45
+                    </button>
+                    <button class="w-1/6 h-10 border border-slate-300 rounded bg-transparent active:bg-slate-950 hover:text-white hover:bg-slate-950 hover:text-white">
+                        46
+                    </button>
+                </div>
+                <p class="text-xs font-semibold text-slate-500 mb-10">Size guide</p>
+                <div class="flex gap-x-5 mb-3">
+                    <button class="w-5/6 h-12 bg-slate-950 rounded text-white">Add To Cart</button>
+                    <button class="flex justify-center items-center w-1/6 h-12 bg-gray-100 rounded">
+                        <img class="rating-star" src="./assets/favourite.png" />
+                    </button>
+                </div>
+                <div class="flex gap-x-2 items-center">
+                    <img class="rating-star" src="./assets/delivery.svg" />
+                    <p class="text-sm">Free delivery on order over $25</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
