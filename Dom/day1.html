@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1 id="count">10</h1>
+    <button id="-">-</button>
+    <button id="+">+</button>
+    <script>
+        // Example 2
+
+
+
+        // Example 1
+        // const squareDiv = document.createElement("div");
+        // const innerDiv = document.createElement("div");
+        // squareDiv.style.width = "100px";
+        // squareDiv.style.height = "100px";
+        // squareDiv.style.background = "green";
+
+        // // Inner div
+        // innerDiv.style.width = "50px";
+        // innerDiv.style.height = "50px";
+        // innerDiv.style.background = "orange";
+
+        // squareDiv.appendChild(innerDiv);
+
+        // document.body.insertAdjacentElement("afterbegin", squareDiv)
+        // Building simple counter
+        const decrementButton = document.getElementById("-");
+        const incrementButton = document.getElementById("+");
+        const countPara = document.getElementById("count");
+        let count = parseInt(countPara.innerText);
+        countPara.innerText = count;
+
+        // decrementButton.addEventListener("onmouseover", function (e) {
+        //     console.log("Decrement hover")
+        // })
+
+        decrementButton.addEventListener("click", function (e) {
+            count = count - 1;
+            console.log(count);
+            countPara.innerText = count;
+        });
+
+        decrementButton.addEventListener("focus", function (e) {
+            count = count - 1;
+            console.log(count);
+            countPara.innerText = count;
+        });
+
+        incrementButton.addEventListener("click", function (e) {
+            count = count + 1;
+            console.log(count);
+            countPara.innerText = count;
+        });
+
+    </script>
+    <!-- Example 1 -->
+    <!-- <p id="para"></p>
+    <script>
+        const p = document.getElementById('para');
+        p.innerText = "Vishnu Vardhan";
+    </script> -->
+    <!-- Example 2 -->
+</body>
+</html>
