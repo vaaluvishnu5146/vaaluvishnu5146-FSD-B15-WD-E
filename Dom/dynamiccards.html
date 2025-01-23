@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon</title>
+    <style>
+        .pokemon {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        const images = [{
+            url: './assets/pikachu.png',
+            name: "pikachu"
+        }, {
+            url: './assets/bulbasaur.png',
+            name: "bulbasaur"
+        }];
+        function createAndRenderImage(image = {}) {
+            const img = document.createElement('img');
+            img.setAttribute('class', 'pokemon')
+            img.setAttribute('src', image.url)
+            img.setAttribute('alt', image.name)
+            document.body.appendChild(img)
+        }
+        for (let i = 0; i < images.length; i++) {
+            createAndRenderImage(images[i])
+        }
+    </script>
+</body>
+
+</html>

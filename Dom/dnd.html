@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DnD</title>
+    <style>
+        .pokemon {
+            width: 100px;
+            height: 100px;
+        }
+
+        .slab {
+            width: 50%;
+            height: 500px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <main style="display: flex;">
+        <div class="slab" id="source">
+            <h1>Source</h1>
+            <img class="pokemon" src="./assets/pikachu.png" alt="pikachu" />
+            <img class="pokemon" src="./assets/bulbasaur.png" alt="bulbasaur" />
+        </div>
+        <div class="slab" id="destination">
+            <h1>Destination</h1>
+
+        </div>
+    </main>
+    <script>
+        const source = document.getElementById('source');
+        const destination = document.getElementById('destination');
+
+        function createImage(data = {}) {
+            const img = document.createElement('img');
+            img.setAttribute('class', 'pokemon');
+            img.setAttribute('src', data.url);
+            img.setAttribute('alt', data.name);
+            return img;
+        }
+
+        source.addEventListener('dragstart', function (event) {
+            console.log(event)
+            console.log('Dragging started', event.target.src)
+            event.dataTransfer.setData("text/plain", JSON.stringify({ name: event.target.alt, url: event.target.src}));
+        })
+
+        destination.addEventListener('dragover', function (event) {
+            event.preventDefault();
+            console.log("Dragover")
+        })
+
+        destination.addEventListener('drop', function(event) {
+            event.preventDefault();
+            console.log("Dropped");
+            const draggedItemData = JSON.parse(event.dataTransfer.getData("text/plain"));
+            destination.appendChild(createImage(draggedItemData));
+            setTimeout(() => {
+                document.querySelector(`#source > img[alt=${draggedItemData.name}]`).remove();
+            }, 500)
+        })
+    
+    </script>
+</body>
+</html>
