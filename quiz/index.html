@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <main class="px-50 h-screen py-10">
+        <p class="text-fuchsia-800 font-semibold mb-3">Questions <span id="currentQuestion">1</span> of <span id="totalNumOfQuestion">2</span></p>
+        <h1 id="title" class="text-3xl font-semibold mb-5">What is HTML?</h1>
+        <div id="options-container" class="flex flex-col gap-y-3 mb-16">
+        </div>
+        <div class="flex justify-between">
+            <button id="back" class="w-30 h-12 bg-stone-950 rounded text-white">Back</button>
+            <button id="next" class="w-30 h-12 border-2 border-stone-950 rounded text-stone">Next</button>
+        </div>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>
