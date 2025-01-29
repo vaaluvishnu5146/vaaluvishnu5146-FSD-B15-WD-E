@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keep Note</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        .todo-card {
+            .content-container {
+                height: 80%;
+            }
+            .icons-container {
+                height: 20%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="px-20 py-5">
+        <form action="/" id="todoForm" class="mb-10">
+            <input placeholder="Enter Todo Title" />
+            <input placeholder="Enter Description" />
+            <button type="submit">Create Todo</button>
+        </form>
+        <form action="/" id="updateTodoForm" class="mb-10">
+            <input placeholder="Enter Todo Title" />
+            <input placeholder="Enter Description" />
+            <input hidden />
+            <button type="submit">Update Todo</button>
+        </form>
+        <div class="grid grid-cols-4 gap-3" id="todo-container">
+        </div>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>
