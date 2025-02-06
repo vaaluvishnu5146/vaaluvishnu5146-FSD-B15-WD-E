@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML inputs</title>
+  </head>
+  <body>
+    <div>
+      <label for="name">Name</label>
+      <input id="name" type="text" placeholder="Enter your name" value="" />
+    </div>
+    <input type="email" />
+    <input type="password" />
+    <input id="date" type="date" />
+    <input type="time" />
+    <input type="datetime-local" />
+    <input id="range" type="range" min="0" max="10" step="2" />
+    <input type="color" />
+
+    <div>
+      <div>
+        <label>Male</label>
+        <input name="gender" type="radio" />
+      </div>
+      <div>
+        <label>Female</label>
+        <input name="gender" type="radio" />
+      </div>
+      <div>
+        <label>Other</label>
+        <input name="gender" type="radio" />
+      </div>
+    </div>
+    <div>
+      <div>
+        <label>English</label>
+        <input name="english" type="checkbox" />
+      </div>
+      <div>
+        <label>Hindi</label>
+        <input name="hindi" type="checkbox" />
+      </div>
+      <div>
+        <label>Tamil</label>
+        <input name="tamil" type="checkbox" />
+      </div>
+    </div>
+    <textarea id="desc"></textarea>
+
+    <select id="selEl">
+      <option>One</option>
+      <option>Two</option>
+      <option>Three</option>
+      <option>Four</option>
+    </select>
+  </body>
+  <script>
+    const nameInput = document.getElementById("name");
+    const dateInput = document.getElementById("date");
+    const desc = document.getElementById("desc");
+    const rangeElement = document.getElementById("range");
+    const selectElement = document.getElementById("selEl");
+
+    nameInput.addEventListener("keyup", (e) => {
+      console.log(e.target.value);
+    });
+
+    desc.addEventListener("keyup", (e) => {
+      console.log(e.target.value);
+    });
+
+    dateInput.addEventListener("change", (e) => {
+      console.log(e.target.value);
+    });
+
+    rangeElement.addEventListener("change", (e) => {
+      console.log(e.target.value);
+    });
+
+    selectElement.addEventListener("change", (e) => {
+      console.log(e.target.value);
+    });
+  </script>
+</html>
